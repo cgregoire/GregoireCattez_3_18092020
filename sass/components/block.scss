@@ -36,3 +36,23 @@
     background: $grey-lighter;
   }
 }
+
+.restaurant {
+
+  .block {
+    padding: 3rem 1.25rem;
+    background: $grey-lighter;
+    display: grid;
+
+    &-header {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+    }
+
+    &-title {
+      font-family: 'Shrikhand', cursive;
+      font-weight: normal;
+    }
+  }
+}

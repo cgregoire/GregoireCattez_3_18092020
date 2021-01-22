@@ -44,45 +44,15 @@ $radius: 1rem;
         font-size: 1.1rem;
         font-weight: 600;
         margin-bottom: .4rem;
+
+        > a {
+          text-decoration: none;
+          color: inherit;
+        }
       }
 
       .location {
         font-weight: 300;
-      }
-
-      .like {
-        font-size: 1.3rem;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        align-items: flex-start;
-        align-self: flex-start;
-
-        .far,
-        .fas {
-          grid-column: 1 / 1;
-          grid-row: 1 / 1;
-        }
-
-        .fas {
-          opacity: 0;
-
-          &:before {
-            background: linear-gradient(45deg,$primary, $secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-        }
-
-        &:hover,
-        &:active {
-          .far {
-            opacity: 0;
-          }
-          .fas {
-              opacity: 1;
-          }
-        }
       }
     }
   }

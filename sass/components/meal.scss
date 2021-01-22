@@ -1,0 +1,24 @@
+.meals {
+  overflow: hidden;
+
+  .meal {
+    width: calc(100%  + 3rem);
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+
+    .informations {
+      width: 100%;
+      display: inline-block;
+      background: red;
+    }
+
+  .select-button {
+    width: 3rem;
+    display: inline-block;
+  }
+
+  &:hover  {
+      width: 100%;
+    }
+  }
+}

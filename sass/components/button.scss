@@ -1,8 +1,14 @@
 .button {
   text-decoration: none;
-  color: white;
   border-radius: 3rem;
   background: linear-gradient($secondary,$primary);
+  display: inline-block;
+  width: auto;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  color: white;
   padding: 1rem 1.5rem;
   box-shadow: 0 0 1rem rgba(0,0,0, .4);
 }

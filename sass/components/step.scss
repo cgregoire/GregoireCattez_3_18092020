@@ -17,17 +17,22 @@
     margin: {
       left: .75rem;
     };
-    border-radius: 1.75rem;
+    border-radius: 1.5rem;
     background: $grey-lighter;
     position: relative;
     display: grid;
     align-items: center;
-    grid-template-columns: auto 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1rem 1fr;
+    gap: 1.3rem;
 
     .icon {
+      justify-self: center;
       color: $grey;        
-      font-size: 1.25rem;
+      font-size: 1.1rem;
+
+      &.fa-store {
+        font-size: 1rem;
+      }
     }
 
     .label {

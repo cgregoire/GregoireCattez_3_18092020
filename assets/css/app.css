@@ -344,11 +344,21 @@ template {
   transition: all linear 250ms;
 }
 
+.top-radius {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.translated {
+  transform: translateY(-3rem);
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -369,9 +379,30 @@ h3 {
 #main-header {
   display: grid;
   place-content: center;
-  padding: 1rem;
+  padding-top: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.9rem;
   box-shadow: 0 0.2rem 5px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+#main-header > a {
+  display: inherit;
+  place-content: inherit;
+}
+#main-header.has-icon {
+  grid-template-columns: auto 1fr;
+}
+#main-header.has-icon #logo-wrapper {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+#main-header #nav-arrow {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  text-decoration: none;
+  color: #101010;
+  font-size: 1.25rem;
 }
 
 #main-footer {
@@ -391,7 +422,7 @@ h3 {
   color: white;
 }
 .usefull-links .usefull-link:not(:last-of-type) {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.65rem;
 }
 .usefull-links .usefull-link a {
   color: inherit;
@@ -425,9 +456,13 @@ h3 {
 
 .button {
   text-decoration: none;
-  color: white;
   border-radius: 3rem;
   background: linear-gradient(#FF79DA, #9356DC);
+  display: inline-block;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
   padding: 1rem 1.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
 }
@@ -447,17 +482,21 @@ h3 {
   padding-top: 1.7rem;
   padding-bottom: 1.7rem;
   margin-left: 0.75rem;
-  border-radius: 1.75rem;
+  border-radius: 1.5rem;
   background: #f6f6f6;
   position: relative;
   display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 1rem 1fr;
+  gap: 1.3rem;
 }
 .steps .step .icon {
+  justify-self: center;
   color: #7e7e7e;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+}
+.steps .step .icon.fa-store {
+  font-size: 1rem;
 }
 .steps .step .label {
   font-weight: 500;
@@ -513,6 +552,49 @@ h3 {
   background: #f6f6f6;
 }
 
+.restaurant .block {
+  padding: 3rem 1.25rem;
+  background: #f6f6f6;
+  display: grid;
+}
+.restaurant .block-header {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.restaurant .block-title {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+
+.like {
+  font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items: flex-start;
+  align-self: flex-start;
+}
+.like .far,
+.like .fas {
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+.like .fas {
+  opacity: 0;
+}
+.like .fas:before {
+  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.like:hover .far, .like:active .far {
+  opacity: 0;
+}
+.like:hover .fas, .like:active .fas {
+  opacity: 1;
+}
+
 .cards {
   display: grid;
   gap: 1rem;
@@ -550,35 +632,33 @@ h3 {
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
+.cards .card footer .title > a {
+  text-decoration: none;
+  color: inherit;
+}
 .cards .card footer .location {
   font-weight: 300;
 }
-.cards .card footer .like {
-  font-size: 1.3rem;
+
+.meals {
+  overflow: hidden;
+}
+.meals .meal {
+  width: calc(100% + 3rem);
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  align-items: flex-start;
-  align-self: flex-start;
+  grid-template-columns: 1fr 3rem;
 }
-.cards .card footer .like .far,
-.cards .card footer .like .fas {
-  grid-column: 1/1;
-  grid-row: 1/1;
+.meals .meal .informations {
+  width: 100%;
+  display: inline-block;
+  background: red;
 }
-.cards .card footer .like .fas {
-  opacity: 0;
+.meals .meal .select-button {
+  width: 3rem;
+  display: inline-block;
 }
-.cards .card footer .like .fas:before {
-  background: linear-gradient(45deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.cards .card footer .like:hover .far, .cards .card footer .like:active .far {
-  opacity: 0;
-}
-.cards .card footer .like:hover .fas, .cards .card footer .like:active .fas {
-  opacity: 1;
+.meals .meal:hover {
+  width: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */
