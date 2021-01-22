@@ -1,0 +1,7 @@
+.transition {
+  transition: all linear 250ms;
+
+  &:hover {
+    transition: all linear 250ms;
+  }
+} 

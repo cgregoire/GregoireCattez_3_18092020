@@ -1,0 +1,89 @@
+$radius: 1rem;
+
+.cards {
+  display: grid;
+  gap: 1rem;
+
+  .card {
+    border-radius: $radius;
+    background: white;
+    box-shadow: 0 0 1rem rgba(0,0,0, .15);
+    
+    .picture {
+      display: block;
+      position: relative;
+      border-top: {
+        left: {
+          radius: $radius;
+        };
+        right: {
+          radius: $radius;
+        };
+      };
+      overflow: hidden;
+
+      .label {
+        position: absolute;
+        top: .8rem;
+        right: .8rem;
+        color: $success-dark;
+        background: $success-light;
+        border-radius: .1rem;
+        padding: .4rem .6rem;
+        font-size: .9rem;
+        font-weight: 500;
+      }
+    }
+
+    footer {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+
+      .title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: .4rem;
+      }
+
+      .location {
+        font-weight: 300;
+      }
+
+      .like {
+        font-size: 1.3rem;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        align-items: flex-start;
+        align-self: flex-start;
+
+        .far,
+        .fas {
+          grid-column: 1 / 1;
+          grid-row: 1 / 1;
+        }
+
+        .fas {
+          opacity: 0;
+
+          &:before {
+            background: linear-gradient(45deg,$primary, $secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        &:hover,
+        &:active {
+          .far {
+            opacity: 0;
+          }
+          .fas {
+              opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

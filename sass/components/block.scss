@@ -1,0 +1,38 @@
+.block {
+  padding: 3.5rem 1.25rem;
+  
+  &-title {
+    margin: {
+      top: 0;
+      bottom: 1.5rem;
+    }
+    color: $dark;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &-subtitle {
+    line-height: 1.4rem;
+    color: $dark;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  &-cta {
+    display: grid;
+    place-items: center;
+    gap: 2.5rem;
+    background-color: $grey-lighter;
+    text-align: center;
+
+    .block-title {
+      margin: {
+        bottom: 0;
+      }
+    }
+  }
+
+  &-restaurants {
+    background: $grey-lighter;
+  }
+}

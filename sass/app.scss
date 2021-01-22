@@ -1,0 +1,27 @@
+
+@import 
+
+// Vars
+  './vars.scss',
+
+// Normalizer cross browser
+  './normalize.scss',
+
+// mixins , tools
+  './mixins.scss',
+  './tools.scss',
+
+// Main styles
+  './base.scss',
+
+// Partials
+  './partials/logo.scss',
+  './partials/header.scss',
+  './partials/footer.scss',
+
+// components
+  './components/top-location.scss',
+  './components/button.scss',
+  './components/step.scss',
+  './components/block.scss',
+  './components/card.scss';

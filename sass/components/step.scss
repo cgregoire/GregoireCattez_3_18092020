@@ -1,0 +1,59 @@
+.steps {
+  display: grid;
+  gap: 1.5rem;
+  counter-reset: step;
+  padding: 0;
+  margin: 0;
+
+  .step {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .15);
+    counter-increment: step;
+    list-style: none;
+    padding: {
+      left: 2rem;
+      top: 1.7rem;
+      bottom: 1.7rem;
+    };
+    margin: {
+      left: .75rem;
+    };
+    border-radius: 1.75rem;
+    background: $grey-lighter;
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+
+    .icon {
+      color: $grey;        
+      font-size: 1.25rem;
+    }
+
+    .label {
+      font-weight: 500;
+    }
+
+    &-emphase {
+      background: $emphase-light;
+      .icon {
+        color: $primary;
+      }
+    }
+
+    &::before{
+      content: counter(step);
+      font-size: 1rem;
+      display: grid;
+      place-content: center;
+      position: absolute;
+      left: -0.75rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: $primary;
+      border-radius: 50%;
+      color: white;
+      font-size: .9rem;
+    }
+  }
+}
