@@ -640,22 +640,69 @@ h3 {
   font-weight: 300;
 }
 
-.meals {
-  overflow: hidden;
+.meals .entrees,
+.meals .dishes,
+.meals .desserts {
+  display: grid;
+  gap: 1rem;
 }
 .meals .meal {
-  width: calc(100% + 3rem);
+  border-radius: 1.5rem;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 3rem;
+  grid-template-columns: 1fr auto;
+  grid-auto-flow: column;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.meals .meal-type {
+  text-transform: uppercase;
+  position: relative;
+}
+.meals .meal-type:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.5rem;
+  height: 3px;
+  width: 2.7rem;
+  background-color: #99e2d0;
 }
 .meals .meal .informations {
+  padding: 0.75rem;
   width: 100%;
-  display: inline-block;
-  background: red;
+  box-sizing: border-box;
+}
+.meals .meal .description {
+  display: grid;
+  gap: 0.3rem;
+  grid-template-areas: "title title" "subtitle price";
+}
+.meals .meal .title {
+  font-weight: 600;
+  grid-area: title;
+}
+.meals .meal .subtitle {
+  grid-area: subtitle;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.meals .meal .price {
+  grid-area: price;
+  text-align: right;
+  font-weight: 600;
+}
+.meals .meal:hover .select-button {
+  margin-right: 0;
 }
 .meals .meal .select-button {
-  width: 3rem;
-  display: inline-block;
+  font-size: 1.4rem;
+  width: 4rem;
+  display: grid;
+  place-content: center;
+  background: #99e2d0;
+  color: white;
+  margin-right: -4rem;
 }
 .meals .meal:hover {
   width: 100%;
