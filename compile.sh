@@ -1,0 +1,1 @@
+sass --watch sass/app.scss assets/css/app.css

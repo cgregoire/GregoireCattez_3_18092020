@@ -357,6 +357,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+#app {
+  display: grid;
+}
+
 img {
   display: block;
   width: 100%;
@@ -417,6 +421,7 @@ h3 {
 .usefull-links {
   list-style: none;
   padding: 0;
+  margin: 1rem 0 0;
 }
 .usefull-links .usefull-link {
   color: white;
@@ -523,6 +528,7 @@ h3 {
 }
 
 .block {
+  position: relative;
   padding: 3.5rem 1.25rem;
 }
 .block-title {
@@ -553,9 +559,20 @@ h3 {
 }
 
 .restaurant .block {
-  padding: 3rem 1.25rem;
+  padding: 0 1.25rem 2rem 1.25rem;
   background: #f6f6f6;
   display: grid;
+}
+.restaurant .block:before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  height: 3rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  background-color: #f6f6f6;
 }
 .restaurant .block-header {
   display: grid;
@@ -565,6 +582,9 @@ h3 {
 .restaurant .block-title {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
+}
+.restaurant .block .button {
+  margin: 3rem auto;
 }
 
 .like {
@@ -640,21 +660,48 @@ h3 {
   font-weight: 300;
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
 .meals .entrees,
 .meals .dishes,
 .meals .desserts {
   display: grid;
   gap: 1rem;
+  margin-bottom: 3rem;
+}
+.meals .desserts {
+  margin-bottom: 0;
 }
 .meals .meal {
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-auto-flow: column;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
+.meals .meal:nth-of-type(1) {
+  animation: slideIn 100ms linear;
+}
+.meals .meal:nth-of-type(2) {
+  animation: slideIn 200ms linear;
+}
+.meals .meal:nth-of-type(3) {
+  animation: slideIn 300ms linear;
+}
+.meals .meal:nth-of-type(4) {
+  animation: slideIn 400ms linear;
+}
 .meals .meal-type {
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
   position: relative;
 }
@@ -668,7 +715,7 @@ h3 {
   background-color: #99e2d0;
 }
 .meals .meal .informations {
-  padding: 0.75rem;
+  padding: 0.75rem 1.25rem 0.75rem 0.75rem;
   width: 100%;
   box-sizing: border-box;
 }
@@ -676,6 +723,7 @@ h3 {
   display: grid;
   gap: 0.3rem;
   grid-template-areas: "title title" "subtitle price";
+  align-items: end;
 }
 .meals .meal .title {
   font-weight: 600;
@@ -686,6 +734,7 @@ h3 {
   font-weight: 400;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .meals .meal .price {
   grid-area: price;
@@ -704,8 +753,19 @@ h3 {
   color: white;
   margin-right: -4rem;
 }
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .meals .meal:hover {
   width: 100%;
+}
+.meals .meal:hover .select-button i {
+  animation: spinner linear 350ms;
 }
 
 /*# sourceMappingURL=app.css.map */

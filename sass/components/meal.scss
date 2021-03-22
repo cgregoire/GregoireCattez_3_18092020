@@ -1,20 +1,43 @@
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
 .meals {
   .entrees,
   .dishes,
   .desserts {
     display: grid;
     gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .desserts {
+    margin-bottom: 0;
   }
 
   .meal {
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-auto-flow: column;
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .15);
 
+    @for $i from 1 through 4 {
+      &:nth-of-type(#{$i}) {
+        animation: slideIn #{$i}00ms  linear;
+      }
+    }
+
     &-type {
+      margin-bottom: .5rem;
       text-transform: uppercase;
       position: relative;
 
@@ -30,7 +53,7 @@
     }
 
     .informations {
-      padding: .75rem;
+      padding: .75rem 1.25rem .75rem .75rem;
       width: 100%;
       box-sizing: border-box;
     }
@@ -39,6 +62,7 @@
       display: grid;
       gap: .3rem;
       grid-template-areas: "title title" "subtitle price";
+      align-items: end;
     }
 
     .title {
@@ -51,6 +75,7 @@
       font-weight: 400;
       text-overflow: ellipsis;
       overflow: hidden;
+      white-space: nowrap;
     }
 
     .price {
@@ -73,10 +98,28 @@
       background: $success-light;
       color: white;
       margin-right: -4rem;
+
+      i {
+        @keyframes spinner {
+          from {
+            transform: rotate(0deg)
+          }
+
+          to {
+            transform: rotate(360deg)
+          }
+        }
+      }
     }
 
     &:hover  {
       width: 100%;
+
+      .select-button { 
+        i {
+          animation: spinner linear 350ms;
+        }
+      }
     }
   }
 }
