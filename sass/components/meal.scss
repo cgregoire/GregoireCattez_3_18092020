@@ -23,16 +23,19 @@
   }
 
   .meal {
+		opacity: 0;
     border-radius: 1rem;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr min-content;
     grid-auto-flow: column;
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .15);
 
-    @for $i from 1 through 4 {
+    @for $i from 1 through 5 {
       &:nth-of-type(#{$i}) {
-        animation: slideIn #{$i}00ms  linear;
+        animation: slideIn 300ms linear;
+				animation-delay: #{$i * 100ms};
+				animation-fill-mode: forwards;
       }
     }
 
@@ -84,20 +87,15 @@
       font-weight: 600;
     }
 
-    &:hover {
-      .select-button {
-        margin-right: 0;
-      }
-    }
-
     .select-button {
+			transition: transform 250ms, width 250ms;
       font-size: 1.4rem;
-      width: 4rem;
+      width: 0rem;
       display: grid;
       place-content: center;
       background: $success-light;
       color: white;
-      margin-right: -4rem;
+      transform: translateX(4rem);
 
       i {
         @keyframes spinner {
@@ -111,15 +109,26 @@
         }
       }
     }
-
     &:hover  {
       width: 100%;
+			transform-origin: right;
 
-      .select-button { 
+			.select-button {
+				width: 4rem;
+        margin-right: 0;
+				transition: transform 250ms, width 250ms;
+      	transform: translateX(0rem);
+				transform-origin: right;
+
         i {
           animation: spinner linear 350ms;
         }
       }
+
+			.informations {
+				width: 100%;
+				transition: width 250ms;
+			}
     }
   }
 }

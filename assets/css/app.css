@@ -681,24 +681,38 @@ h3 {
   margin-bottom: 0;
 }
 .meals .meal {
+  opacity: 0;
   border-radius: 1rem;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr min-content;
   grid-auto-flow: column;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 .meals .meal:nth-of-type(1) {
-  animation: slideIn 100ms linear;
+  animation: slideIn 300ms linear;
+  animation-delay: 100ms;
+  animation-fill-mode: forwards;
 }
 .meals .meal:nth-of-type(2) {
-  animation: slideIn 200ms linear;
+  animation: slideIn 300ms linear;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
 }
 .meals .meal:nth-of-type(3) {
   animation: slideIn 300ms linear;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
 }
 .meals .meal:nth-of-type(4) {
-  animation: slideIn 400ms linear;
+  animation: slideIn 300ms linear;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+}
+.meals .meal:nth-of-type(5) {
+  animation: slideIn 300ms linear;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
 }
 .meals .meal-type {
   margin-bottom: 0.5rem;
@@ -741,17 +755,15 @@ h3 {
   text-align: right;
   font-weight: 600;
 }
-.meals .meal:hover .select-button {
-  margin-right: 0;
-}
 .meals .meal .select-button {
+  transition: transform 250ms, width 250ms;
   font-size: 1.4rem;
-  width: 4rem;
+  width: 0rem;
   display: grid;
   place-content: center;
   background: #99e2d0;
   color: white;
-  margin-right: -4rem;
+  transform: translateX(4rem);
 }
 @keyframes spinner {
   from {
@@ -763,9 +775,21 @@ h3 {
 }
 .meals .meal:hover {
   width: 100%;
+  transform-origin: right;
+}
+.meals .meal:hover .select-button {
+  width: 4rem;
+  margin-right: 0;
+  transition: transform 250ms, width 250ms;
+  transform: translateX(0rem);
+  transform-origin: right;
 }
 .meals .meal:hover .select-button i {
   animation: spinner linear 350ms;
+}
+.meals .meal:hover .informations {
+  width: 100%;
+  transition: width 250ms;
 }
 
 /*# sourceMappingURL=app.css.map */
