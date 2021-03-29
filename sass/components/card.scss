@@ -57,3 +57,17 @@ $radius: 1rem;
     }
   }
 }
+
+$cardMargin: 15%;
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
