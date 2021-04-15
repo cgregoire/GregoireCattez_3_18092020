@@ -1,10 +1,12 @@
       .like {
+				text-decoration: none;
         font-size: 1.3rem;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto;
         align-items: flex-start;
         align-self: flex-start;
+				color: black;
 
         .far,
         .fas {
@@ -23,7 +25,8 @@
         }
 
         &:hover,
-        &:active {
+        &:active,
+				&:focus {
           .far {
             opacity: 0;
           }

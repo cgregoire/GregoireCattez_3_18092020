@@ -132,3 +132,12 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+	.meals {
+		display: grid;
+		grid-template-columns: repeat(3,minmax(1rem, 1fr));
+    gap: 3rem;
+    align-items: flex-start;
+	}
+}

@@ -348,10 +348,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-#app {
-  display: grid;
-}
-
 img {
   display: block;
   width: 100%;
@@ -553,42 +549,15 @@ h3 {
   background: #f6f6f6;
 }
 
-.restaurant .block {
-  padding: 0 1.25rem 2rem 1.25rem;
-  background: #f6f6f6;
-  display: grid;
-}
-.restaurant .block:before {
-  content: "";
-  position: absolute;
-  top: -3rem;
-  left: 0;
-  right: 0;
-  height: 3rem;
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
-  background-color: #f6f6f6;
-}
-.restaurant .block-header {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-}
-.restaurant .block-title {
-  font-family: "Shrikhand", cursive;
-  font-weight: normal;
-}
-.restaurant .block .button {
-  margin: 3rem auto;
-}
-
 .like {
+  text-decoration: none;
   font-size: 1.3rem;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
   align-items: flex-start;
   align-self: flex-start;
+  color: black;
 }
 .like .far,
 .like .fas {
@@ -603,10 +572,10 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.like:hover .far, .like:active .far {
+.like:hover .far, .like:active .far, .like:focus .far {
   opacity: 0;
 }
-.like:hover .fas, .like:active .fas {
+.like:hover .fas, .like:active .fas, .like:focus .fas {
   opacity: 1;
 }
 
@@ -795,6 +764,52 @@ h3 {
 .meals .meal:hover .informations {
   width: 100%;
   transition: width 250ms;
+}
+
+@media (min-width: 1024px) {
+  .meals {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(1rem, 1fr));
+    gap: 3rem;
+    align-items: flex-start;
+  }
+}
+.restaurant .block {
+  padding: 0 1.25rem 2rem 1.25rem;
+  background: #f6f6f6;
+  display: grid;
+}
+.restaurant .block:before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  height: 3rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  background-color: #f6f6f6;
+}
+.restaurant .block-header {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.restaurant .block-header .like {
+  margin-right: 2rem;
+}
+.restaurant .block-title {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+.restaurant .block .button {
+  margin: 3rem auto;
+}
+
+@media (min-width: 1024px) {
+  .restaurant .block {
+    margin: 0 1rem;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
