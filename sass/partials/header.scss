@@ -1,35 +1,67 @@
-#main-header {
-  display: grid;
-  place-content: center;
-  padding: {
-    top: 1.25rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    bottom: .9rem;
-  };
-  box-shadow: 0 .2rem 5px rgb(0, 0, 0, .2);
-  position: relative;
 
-  > a {
-    display: inherit;
-    place-content: inherit;
-  }
-
-  &.has-icon {
-    grid-template-columns: auto 1fr;
-
-    #logo-wrapper {
-      grid-column: 1 / 3;
-      grid-row: 1 / 2;
-    }
-  }
-
-  #nav-arrow {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    text-decoration: none;
-    color: $dark;
-    font-size: 1.25rem;
-  }
-
+.restaurant {
+	
+	#main-header {
+		display: grid;
+		align-items: center;
+		position: relative;
+		
+		#logo-wrapper {
+			padding: 1.25rem 1.5rem .9rem 1.5rem;
+			display: inherit;
+			place-content: center;
+		}
+		
+		
+		&.has-icon {
+			grid-template-columns: auto 1fr;
+			
+			#logo-wrapper {
+				grid-column: 1 / 3;
+				grid-row: 1 / 2;
+			}
+		}
+		
+		#nav-arrow {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+			text-decoration: none;
+			color: $dark;
+			font-size: 1.25rem;
+		}
+	}
+	
 }
+.home {
+	
+	#main-header {
+		grid-auto-flow: column;
+		place-content: center;
+		
+		#logo-wrapper {
+			align-self: center;
+			display: block;
+			padding: 1.25rem 1.5rem .9rem 1.5rem;
+		}
+	}
+	
+}
+
+@media (min-width: 768px) {
+	.home, .restaurant {
+		#main-header {
+			display: grid;
+			justify-content: space-between;
+			align-items: center;
+			padding: .7rem 1.5rem;
+
+			#logo-wrapper {
+				padding: 0;
+			}
+
+			.top-location {
+				background: none;
+				box-shadow: none;
+			}
+		}}
+	}

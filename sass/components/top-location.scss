@@ -1,6 +1,7 @@
 .top-location {
   text-align: center;
   background: $grey-light;
+		box-shadow: 0 .2rem 5px rgb(0, 0, 0, .2) inset;
 
   p {
     margin: 0;
@@ -13,4 +14,12 @@
   .icon {
     margin-right: 1rem;
   }
+}
+
+@media (min-width: 768px) {
+	.top-location {
+		p {
+			padding: 0;
+		}
+	}
 }
