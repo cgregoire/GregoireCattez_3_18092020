@@ -344,15 +344,6 @@ template {
   transition: all linear 250ms;
 }
 
-.top-radius {
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-}
-
-.translated {
-  transform: translateY(-3rem);
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -470,6 +461,10 @@ h3 {
   color: white;
   padding: 1rem 1.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+}
+.button:hover {
+  background: linear-gradient(#ff83dd, #985ede);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
 
 .steps {

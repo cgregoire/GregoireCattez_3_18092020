@@ -11,4 +11,10 @@
   color: white;
   padding: 1rem 1.5rem;
   box-shadow: 0 0 1rem rgba(0,0,0, .4);
+
+	&:hover {
+  	background: linear-gradient(lighten($secondary,2%),lighten($primary, 2%));
+		box-shadow: 0 0 1rem rgba(0,0,0, .2);
+	}
+
 }
