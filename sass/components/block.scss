@@ -37,3 +37,10 @@
     background: $grey-lighter;
   }
 }
+
+@media (min-width: 768px) {
+	.block-title {
+		text-align: center;
+		margin: 0 auto 2rem;
+	}
+}

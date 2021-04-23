@@ -546,6 +546,37 @@ h3 {
   font-size: 0.9rem;
 }
 
+@media (min-width: 768px) {
+  .steps {
+    grid-auto-flow: column;
+    max-width: 1200px;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  .steps .step {
+    height: 5rem;
+    margin-left: 0;
+    padding: 3rem 1.5rem;
+    grid-template-columns: initial;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  .steps .step:before {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.25rem;
+    left: calc(50% - 1rem);
+    top: -1.125rem;
+    align-items: center;
+  }
+  .steps .step .label {
+    font-size: 1.2rem;
+  }
+  .steps .step .icon,
+.steps .step .icon.fa-store {
+    font-size: 1.4rem;
+  }
+}
 .block {
   position: relative;
   padding: 3.5rem 1.25rem;
@@ -577,6 +608,12 @@ h3 {
   background: #f6f6f6;
 }
 
+@media (min-width: 768px) {
+  .block-title {
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+}
 .like {
   text-decoration: none;
   font-size: 1.3rem;
