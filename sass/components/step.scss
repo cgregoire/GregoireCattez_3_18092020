@@ -87,14 +87,18 @@
 					align-items: center;
 				}
 
-				.label {
-					font-size: 1.2rem;
-				}
-
 				.icon,
 				.icon.fa-store {
 					font-size: 1.4rem;
 				}
 			}
 		}
+}
+
+@media (min-width: 900px) {
+	.step {
+		.label {
+			font-size: 1.2rem;
+		}
+	}		
 }

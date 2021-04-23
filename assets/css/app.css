@@ -569,12 +569,14 @@ h3 {
     top: -1.125rem;
     align-items: center;
   }
-  .steps .step .label {
-    font-size: 1.2rem;
-  }
   .steps .step .icon,
 .steps .step .icon.fa-store {
     font-size: 1.4rem;
+  }
+}
+@media (min-width: 900px) {
+  .step .label {
+    font-size: 1.2rem;
   }
 }
 .block {
