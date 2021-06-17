@@ -21,7 +21,9 @@
 
     a {
       color: inherit;
-      text-decoration: none;
+      text-decoration: none;    
+			display: inline-block;
+    	padding: .15rem .5rem;
 
       &.has-icon {
         display: grid;
