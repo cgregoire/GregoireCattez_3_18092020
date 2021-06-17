@@ -885,5 +885,11 @@ h3 {
     margin: 0 1rem;
   }
 }
+@media (min-width: 1300px) {
+  .restaurant img {
+    max-height: 30rem;
+    object-fit: cover;
+  }
+}
 
 /*# sourceMappingURL=app.css.map */
