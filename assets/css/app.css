@@ -432,19 +432,15 @@ h3 {
 .usefull-links {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
 }
 .usefull-links .usefull-link {
   color: white;
-}
-.usefull-links .usefull-link:not(:last-of-type) {
-  margin-bottom: 0.65rem;
 }
 .usefull-links .usefull-link a {
   color: inherit;
   text-decoration: none;
   display: inline-block;
-  padding: 0.15rem 0.5rem;
+  padding: 0.275rem 0.5rem 0.25rem 0;
 }
 .usefull-links .usefull-link a.has-icon {
   display: grid;

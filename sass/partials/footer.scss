@@ -10,20 +10,15 @@
 .usefull-links {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
 
   .usefull-link {
     color: white;
-
-    &:not(:last-of-type) {
-      margin-bottom: .65rem;
-    }
 
     a {
       color: inherit;
       text-decoration: none;    
 			display: inline-block;
-    	padding: .15rem .5rem;
+    	padding: .275rem .5rem .25rem 0;
 
       &.has-icon {
         display: grid;
