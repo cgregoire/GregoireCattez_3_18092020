@@ -627,6 +627,8 @@ h3 {
   align-items: flex-start;
   align-self: flex-start;
   color: black;
+  background: none;
+  border: none;
 }
 .like .far,
 .like .fas {
@@ -789,9 +791,12 @@ h3 {
 .meals .meal .subtitle {
   grid-area: subtitle;
   font-weight: 400;
+}
+.meals .meal .title,
+.meals .meal .subtitle {
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
 }
 .meals .meal .price {
   grid-area: price;
