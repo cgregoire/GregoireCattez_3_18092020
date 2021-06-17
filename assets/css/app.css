@@ -355,14 +355,6 @@ img {
   max-width: 100%;
 }
 
-h1 {
-  font-family: "Shrikhand", cursive;
-}
-
-h3 {
-  margin: 0;
-}
-
 #main-logo {
   max-width: 165px;
   margin: auto;
@@ -685,6 +677,7 @@ h3 {
 .cards .card footer .title {
   font-size: 1.1rem;
   font-weight: 600;
+  margin: 0;
   margin-bottom: 0.4rem;
 }
 .cards .card footer .title > a {
