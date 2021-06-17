@@ -19,11 +19,23 @@
       </a>
       <a href="./index.html" id="nav-arrow"><i class="icon fas fa-arrow-left"></i></a>
     </header>
-	 <img 
-        src="./assets/img/restaurants/le-delice-des-sens@2x-home.jpg" 
-        srcset="./assets/img/restaurants/le-delice-des-sens-home.jpg,
-        ./assets/img/restaurants/le-delice-des-sens@2x-home.jpg 2x"
-        alt="Restaurant Le délice des sens">
+		<picture>
+			<source
+				media="(max-width: 499px)"
+				srcset="./assets/img/restaurants/le-delice-des-sens-m.jpg,
+			./assets/img/restaurants/le-delice-des-sens-m@1,5x.jpg 1,5x"
+			>
+			<source
+				media="(min-width: 500px)"
+				srcset="./assets/img/restaurants/le-delice-des-sens-restaurant.jpg,
+			./assets/img/restaurants/le-delice-des-sens-restaurant@1,5x.jpg 1,5x"
+			>
+			<img 
+				srcset="./assets/img/restaurants/le-delice-des-sens-m.jpg,
+			./assets/img/restaurants/le-delice-des-sens-m@1,5x.jpg 1,5x"
+				src="./assets/img/restaurants/le-delice-des-sens-m.jpg"
+				alt="Restaurant Le Délice des sens">
+		</picture>
     
     <div class="block">
       <header class="block-header">

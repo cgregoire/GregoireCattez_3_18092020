@@ -19,11 +19,24 @@
       </a>
       <a href="./index.html" id="nav-arrow"><i class="icon fas fa-arrow-left"></i></a>
     </header>
-		<img 
-			src="./assets/img/restaurants/la-note-enchantee@2x-home.jpg" 
-			srcset="./assets/img/restaurants/la-note-enchantee-home.jpg,
-				./assets/img/restaurants/la-note-enchantee@2x-home.jpg 2x"
-			alt="Restaurant La  note enchantée">
+
+		<picture>
+			<source
+				media="(max-width: 499px)"
+				srcset="./assets/img/restaurants/la-note-enchantee-m.jpg,
+			./assets/img/restaurants/la-note-enchantee-m@1,5x.jpg 1,5x"
+			>
+			<source
+				media="(min-width: 500px)"
+				srcset="./assets/img/restaurants/la-note-enchantee-restaurant.jpg,
+			./assets/img/restaurants/la-note-enchantee-restaurant@1,5x.jpg 1,5x"
+			>
+			<img 
+				srcset="./assets/img/restaurants/la-note-enchantee-m.jpg,
+			./assets/img/restaurants/la-note-enchantee-m@1,5x.jpg 1,5x"
+				src="./assets/img/restaurants/la-note-enchantee-m.jpg"
+				alt="Restaurant La  note enchantée">
+		</picture>
     
     <div class="block">
       <header class="block-header">

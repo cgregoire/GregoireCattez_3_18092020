@@ -391,6 +391,8 @@ h3 {
   text-decoration: none;
   color: #101010;
   font-size: 1.25rem;
+  left: 1.5rem;
+  position: absolute;
 }
 
 .home #main-header {
@@ -849,10 +851,10 @@ h3 {
 .restaurant .block:before {
   content: "";
   position: absolute;
-  top: -3rem;
+  top: -2rem;
   left: 0;
   right: 0;
-  height: 3rem;
+  height: 2rem;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
   background-color: #f6f6f6;
@@ -863,7 +865,7 @@ h3 {
   justify-content: space-between;
 }
 .restaurant .block-header .like {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 .restaurant .block-title {
   font-family: "Shrikhand", cursive;
@@ -873,6 +875,11 @@ h3 {
   margin: 3rem auto;
 }
 
+@media (min-width: 425) {
+  .like {
+    margin-right: 2rem;
+  }
+}
 @media (min-width: 1024px) {
   .restaurant .block {
     margin: 0 1rem;
