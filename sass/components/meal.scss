@@ -10,6 +10,8 @@
   }
 }
 .meals {
+		counter-reset: meal 0;
+
   .entrees,
   .dishes,
   .desserts {

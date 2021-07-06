@@ -2,6 +2,21 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#app {
+	position: relative;
+	background-color: white;
+}
+
+main {
+	display: grid;
+	grid-auto-flow: row;
+	height: 100vh;
+
+	#main-footer {
+		align-self: flex-end;
+	}
+}
+
 img {
   display: block;
   width: 100%;

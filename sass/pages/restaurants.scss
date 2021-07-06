@@ -38,7 +38,7 @@
   }
 }
 
-@media (min-width: 425) {
+@media (min-width: 425px) {
 	.like {
 		margin-right: 2rem;
 	}
@@ -47,7 +47,8 @@
 @media (min-width: 1024px) {
 	.restaurant {
 		.block {
-			margin: 0 1rem;
+			margin: 0 auto;
+			max-width: 1440px;
 		}
 	}
 }

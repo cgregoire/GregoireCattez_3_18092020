@@ -1,0 +1,44 @@
+.loader-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	animation-name: removeLoader;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	display: grid;
+	place-items: center;
+
+	.loader {
+		color: $primary;
+		font-size: 2.5rem;
+		animation-name: spinning;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+	}
+}
+
+@keyframes removeLoader {
+	0% {
+		z-index: 1000;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	100% {
+			z-index: -1000;
+			// opacity: 0;
+			// visibility: hidden;
+	}
+}
+
+@keyframes spinning {
+	from {
+		transform: rotate(0deg)
+	}
+	to {
+		transform: rotate(360deg)
+	}
+}

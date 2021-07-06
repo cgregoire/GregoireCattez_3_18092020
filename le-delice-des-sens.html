@@ -20,163 +20,172 @@
 
 <body class="restaurant">
 	<div id="app">
-		<header id="main-header" class="has-icon">
-			<a href="./index.html" id="logo-wrapper">
-				<img src="./assets/img/ohmyfood-logo.svg" alt="ohmyfood logo brand" id="main-logo" width=165 height=29 />
-			</a>
-			<a href="./index.html" id="nav-arrow" aria-label="Vers l'accueil"><i class="icon fas fa-arrow-left"></i></a>
-		</header>
-		<picture>
-			<source media="(max-width: 499px)" srcset="./assets/img/restaurants/le-delice-des-sens-m.jpg,
-			./assets/img/restaurants/le-delice-des-sens-m@1,5x.jpg 2x">
-			<source media="(min-width: 500px)" srcset="./assets/img/restaurants/le-delice-des-sens-restaurant.jpg,
-			./assets/img/restaurants/le-delice-des-sens-restaurant@1,5x.jpg 2x">
-			<img srcset="./assets/img/restaurants/le-delice-des-sens-m.jpg,
-			./assets/img/restaurants/le-delice-des-sens-m@1,5x.jpg 2x" src="./assets/img/restaurants/le-delice-des-sens-m.jpg"
-				alt="Restaurant Le Délice des sens" width="1280" height="480">
-		</picture>
 
-		<div class="block">
-			<header class="block-header">
-				<h1 class="block-title">Le délice des sens</h1>
-				<button class="like" aria-label="Like restaurant">
-					<i class="transition fas fa-heart"></i>
-					<i class="transition far fa-heart"></i>
-				</button>
-			</header>
-			<div class="meals">
-				<div class="entrees">
-					<div class="meal-type">Entrées</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Tartare de thon</div>
-								<div class="subtitle">Assaisonné au yuzu</div>
-								<div class="price">25€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Bouchée de homard croustillant</div>
-								<div class="subtitle">Et sa farandole de petits légumes</div>
-								<div class="price">35€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Velouté de cèpes</div>
-								<div class="subtitle">Aux truffes</div>
-								<div class="price">20€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-				</div>
-				<div class="dishes">
-					<div class="meal-type">Plats</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Poulet rôti aux herbes de Provence</div>
-								<div class="subtitle">Et sa crème de truffe</div>
-								<div class="price">40€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Langouste rôtie</div>
-								<div class="subtitle">Et ses légumes de saison</div>
-								<div class="price">35€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Côte de boeuf Angus</div>
-								<div class="subtitle">Et sa purée de panais</div>
-								<div class="price">44€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-				</div>
-				<div class="desserts">
-					<div class="meal-type">Desserts</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Farandole de desserts</div>
-								<div class="subtitle">Du chef</div>
-								<div class="price">18€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Crème brulée</div>
-								<div class="subtitle">Revisitée</div>
-								<div class="price">22€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-					<div class="meal">
-						<div class="informations">
-							<div class="description">
-								<div class="title">Tiramisu</div>
-								<div class="subtitle">À la noisette</div>
-								<div class="price">23€</div>
-							</div>
-						</div>
-						<div class="select-button">
-							<i class="fas fa-check-circle transition"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-			<a class="button transition" href="#" title="Explorez nos restaurants">Explorez nos restaurants</a>
+		<div class="loader-container">
+			<i class="fas fa-utensils loader"></i>
 		</div>
+		<main>
+			<header id="main-header" class="has-icon">
+				<a href="./index.html" id="logo-wrapper">
+					<img src="./assets/img/ohmyfood-logo.svg" alt="ohmyfood logo brand" id="main-logo" width=165 height=29 />
+				</a>
+				<a href="./index.html" id="nav-arrow" aria-label="Vers l'accueil"><i class="icon fas fa-arrow-left"></i></a>
+			</header>
+			<picture>
+				<source media="(max-width: 499px)" srcset="./assets/img/restaurants/le-delice-des-sens-m.jpg,
+			./assets/img/restaurants/le-delice-des-sens-m@1,5x.jpg 2x">
+				<source media="(min-width: 500px)" srcset="./assets/img/restaurants/le-delice-des-sens-restaurant.jpg,
+			./assets/img/restaurants/le-delice-des-sens-restaurant@1,5x.jpg 2x">
+				<img srcset="./assets/img/restaurants/le-delice-des-sens-m.jpg,
+			./assets/img/restaurants/le-delice-des-sens-m@1,5x.jpg 2x" src="./assets/img/restaurants/le-delice-des-sens-m.jpg"
+					alt="Restaurant Le Délice des sens" width="1280" height="480">
+			</picture>
 
-		<footer id="main-footer">
-			<img src="./assets/img/ohmyfood-logo-white.svg" alt="ohmyfood logo brand" id="footer-logo" width=100 height=17>
-			<ul class="usefull-links">
-				<li class="usefull-link"><a href="#" class="has-icon"><i class="icon fas fa-utensils"></i>Proposer un
-						restaurant</a></li>
-				<li class="usefull-link"><a href="#" class="has-icon"><i class="icon fas fa-hands-helping"></i>Devenir
-						partenaire</a></li>
-				<li class="usefull-link"><a href="#">Mentions légales</a></li>
-				<li class="usefull-link"><a href="mailto:contact@mail.com">Contact</a></li>
-			</ul>
-		</footer>
+			<div class="block">
+				<header class="block-header">
+					<h1 class="block-title">Le délice des sens</h1>
+					<button class="like" aria-label="Like restaurant">
+						<i class="transition fas fa-heart"></i>
+						<i class="transition far fa-heart"></i>
+					</button>
+				</header>
+				<div class="meals">
+					<div class="entrees">
+						<div class="meal-type">Entrées</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Tartare de thon</div>
+									<div class="subtitle">Assaisonné au yuzu</div>
+									<div class="price">25€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Bouchée de homard croustillant</div>
+									<div class="subtitle">Et sa farandole de petits légumes</div>
+									<div class="price">35€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Velouté de cèpes</div>
+									<div class="subtitle">Aux truffes</div>
+									<div class="price">20€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+					</div>
+					<div class="dishes">
+						<div class="meal-type">Plats</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Poulet rôti aux herbes de Provence</div>
+									<div class="subtitle">Et sa crème de truffe</div>
+									<div class="price">40€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Langouste rôtie</div>
+									<div class="subtitle">Et ses légumes de saison</div>
+									<div class="price">35€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Côte de boeuf Angus</div>
+									<div class="subtitle">Et sa purée de panais</div>
+									<div class="price">44€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+					</div>
+					<div class="desserts">
+						<div class="meal-type">Desserts</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Farandole de desserts</div>
+									<div class="subtitle">Du chef</div>
+									<div class="price">18€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Crème brulée</div>
+									<div class="subtitle">Revisitée</div>
+									<div class="price">22€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+						<div class="meal">
+							<div class="informations">
+								<div class="description">
+									<div class="title">Tiramisu</div>
+									<div class="subtitle">À la noisette</div>
+									<div class="price">23€</div>
+								</div>
+							</div>
+							<div class="select-button">
+								<i class="fas fa-check-circle transition"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="button transition" href="#" title="Explorez nos restaurants">Explorez nos restaurants</a>
+			</div>
+
+			<footer id="main-footer">
+				<div class="base-container">
+					<img src="./assets/img/ohmyfood-logo-white.svg" alt="ohmyfood logo brand" id="footer-logo" width=100
+						height=17>
+					<ul class="usefull-links">
+						<li class="usefull-link"><a href="#" class="has-icon"><i class="icon fas fa-utensils"></i>Proposer un
+								restaurant</a></li>
+						<li class="usefull-link"><a href="#" class="has-icon"><i class="icon fas fa-hands-helping"></i>Devenir
+								partenaire</a></li>
+						<li class="usefull-link"><a href="#">Mentions légales</a></li>
+						<li class="usefull-link"><a href="mailto:contact@mail.com">Contact</a></li>
+					</ul>
+				</div>
+			</footer>
+		</main>
 	</div>
 </body>
 
